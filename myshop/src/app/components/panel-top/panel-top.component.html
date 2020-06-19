@@ -1,0 +1,18 @@
+<div>
+    <div style="display: flex;flex-direction: row; justify-content: center;">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-495328432-1559757205.jpg" width="150px" routerLink="/landing" alt="">
+        <h2 style="font-size: 50px;"> Purpletree </h2>
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-495328432-1559757205.jpg" width="150px" routerLink="/landing" alt="">
+    </div>
+
+    <button routerLink="/adm_dashboard" style="background-color: #D5CFE1;">Widoczny tylko dla wybranych Panel Administratora</button>
+    <div>
+      <button  routerLink="/cart"  style="background-color: #D5CFE1;">Koszyk</button>
+      <button id="cart8tn">{{getCartQuanity()}}</button>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <input type="text" [(ngModel)]="this.mainService.productsRequest.name">
+        <button (click)="this.mainService.getProducts(this.mainService.productsRequest)" routerLink="/products">Szukaj Produktu</button>
+    </div>
+
+</div>

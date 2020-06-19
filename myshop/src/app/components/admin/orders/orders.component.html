@@ -1,0 +1,30 @@
+
+      <div class="content-container">
+        <button routerLink="/adm_dashboard">Wstecz</button>
+
+          <h2 style="text-align: center;">Zamowienia</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Cena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of this.mainService.orders?.orders">
+                <td>{{order.id}}</td>
+                <td>{{order.first_name}}</td>
+                <td>{{order.last_name}}</td>
+                <td>{{order.email}}</td>
+                <td>{{order.phone}}</td>
+                <td>{{order.price}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+
